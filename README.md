@@ -1,8 +1,4 @@
-# MEC 202 -  
-
-# Industrial Awareness and Group Project
-
-
+# MEC 202 - Industrial Awareness and Group Project
 
 ## Remote Robot Control Demo Project - Draft Scripts
 
