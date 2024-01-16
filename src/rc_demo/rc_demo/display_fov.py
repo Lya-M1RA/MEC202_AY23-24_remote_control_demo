@@ -10,7 +10,7 @@ class DisplayFOV(Node):
 
         self.subscription = self.create_subscription(
             CompressedImage,
-            '/image_raw/compressed',
+            '/image_raw/theora',
             self.listener_callback,
             10)
         
@@ -19,7 +19,7 @@ class DisplayFOV(Node):
     def listener_callback(self, msg):
         try:
             self.get_logger().info('Receiving video frame')
-            cv_image = self.bridge.compressed_imgmsg_to_cv2(msg, "bgr8")
+            cv_image = self.bridge.theora_imgmsg_to_cv2(msg, "bgr8")
             cv2.imshow("FOV Display", cv_image)
             cv2.waitKey(1)
         except Exception as e:
