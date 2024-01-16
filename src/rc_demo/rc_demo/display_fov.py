@@ -25,11 +25,8 @@ class DisplayFOV(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    display_fov = DisplayFOV()
-    rclpy.spin(display_fov)
-    display_fov.destroy_node()
+    node = DisplayFOV('display_fov')
+    rclpy.spin(node)
+    node.destroy_node()
     rclpy.shutdown()
     cv2.destroyAllWindows()
-
-if __name__ == '__main__':
-    main()
