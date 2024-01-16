@@ -5,13 +5,15 @@ from cv_bridge import CvBridge
 from sensor_msgs.msg import CompressedImage
 
 class DisplayFOV(Node):
-    def __init__(self):
-        super().__init__('display_fov')
+    def __init__(self, name):
+        super().__init__(name)
+
         self.subscription = self.create_subscription(
             CompressedImage,
             '/image_raw/theora',
             self.listener_callback,
             10)
+        
         self.subscription  # 防止未使用的变量警告
         self.bridge = CvBridge()
 
