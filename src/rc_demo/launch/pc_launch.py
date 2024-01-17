@@ -8,13 +8,20 @@ def generate_launch_description():
         name='joy_node'
     )
 
-    display_fov_node = Node(
-        package='rc_demo',  # 替换为 manual_mode 节点所在的包名
-        executable='display_fov',  # 替换为 manual_mode 的可执行文件名
-        name='display_fov'
+    trans_fov_node = Node(
+            package='image_transport',
+            executable='republish',
+            name='republish_node',
+            remappings=[
+                ('in', '/image_raw/theora'),
+                ('out', '/rc_demo/fov_image')
+            ],
+            parameters=[
+                {'transport': 'theora'}
+            ]
     )
 
     return LaunchDescription([
         joy_node,
-        display_fov_node
+        trans_fov_node
     ])
