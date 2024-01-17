@@ -8,22 +8,19 @@ def generate_launch_description():
         name='joy_node'
     )
 
-    trans_fov_node = Node(
-        package='image_transport',
-        executable='republish',
-        name='republish_theora',
-        remappings=[
-            ('in', '/image_raw/theora'),
-            ('out', '/rc_demo/fov_image')
-        ],
+    disp_fov_node = Node(
+        package='video_view',
+        executable='video_viewer_node',
+        name='video_viewer_node',
         parameters=[
-            {'in_transport': 'theora'},
-            {'out_transport': 'raw'}
-        ]
+            {'image_topic': '/image_raw'},
+            {'image_transport': 'theora'}
+        ],
+        output='screen'
     )
 
 
     return LaunchDescription([
         joy_node,
-        trans_fov_node
+        disp_fov_node
     ])
