@@ -9,17 +9,19 @@ def generate_launch_description():
     )
 
     trans_fov_node = Node(
-            package='image_transport',
-            executable='republish',
-            name='republish_node',
-            remappings=[
-                ('in', '/image_raw/theora'),
-                ('out', '/rc_demo/fov_image')
-            ],
-            parameters=[
-                {'transport': 'theora'}
-            ]
+        package='image_transport',
+        executable='republish',
+        name='republish_theora',
+        remappings=[
+            ('in', '/image_raw/theora'),
+            ('out', '/rc_demo/fov_image')
+        ],
+        parameters=[
+            {'in_transport': 'theora'},
+            {'out_transport': 'raw'}
+        ]
     )
+
 
     return LaunchDescription([
         joy_node,
