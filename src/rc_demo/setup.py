@@ -24,7 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'display_fov = rc_demo.display_fov:main',
+            'wheel_control = rc_demo.wheel_control:main',
         ],
     },
 )
