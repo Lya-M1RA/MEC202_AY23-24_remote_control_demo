@@ -10,7 +10,7 @@ def generate_launch_description():
     )
 
     wheel_control_node = Node(
-        package='rc_remote',
+        package='rc_demo',
         executable='wheel_control',
         name='wheel_control'
     )
