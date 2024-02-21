@@ -10,7 +10,7 @@
 ## Content
 
 1. [Installing ROS2](#1)
-2. [Getting familiar with ROS2 key features](#2)
+2. ~~[Getting familiar with ROS2 key features](#2)~~
 3. [Controlling the vehicle within LAN](#3)
 4. [Controlling the vehicle within WAN](#4)
 
@@ -123,30 +123,30 @@ Here are the steps to install ROS2 Humble on Ubuntu 22.04 LTS. You must complete
 
 Thus, the installation of ROS2 and related tools is complete.
 
-<h3 id="2">2. Getting familiar with ROS2 key features</h3>
+<h3 id="2">2. Getting familiar with ROS2 key features</h3>  
 
-Before attempting to deploy the vehicle remote control demo, you need to follow few articles to understand some of the key features of ROS2.
+~~Before attempting to deploy the vehicle remote control demo, you need to follow few articles to understand some of the key features of ROS2.~~  
 
-- **Using `turtlesim`, `ros2`, and `rqt`**
+~~- **Using `turtlesim`, `ros2`, and `rqt`**~~  
 
-  https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html
+  ~~https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html~~  
 
-- **Understanding nodes**
+~~- **Understanding nodes**~~  
 
-  https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html#
+  ~~https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html~~
 
-- **Understanding topics**
+~~- **Understanding topics**~~
 
-  https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html
+  ~~https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html~~
 
-- **Understanding parameters**
+~~- **Understanding parameters**~~
 
-  https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html
+  ~~https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html~~
 
-Please complete the contents of the above tutorials. For a systematic introduction to ROS2, you can refer to the tutorials on these websites.
+~~Please complete the contents of the above tutorials. For a systematic introduction to ROS2, you can refer to the tutorials on these websites.~~
 
-- (Chinese) ROS2入门教程 https://book.guyuehome.com/
-- (English) ROS2 Documentation https://docs.ros.org/en/humble/Tutorials.html
+~~- (Chinese) ROS2入门教程 https://book.guyuehome.com/~~
+~~- (English) ROS2 Documentation https://docs.ros.org/en/humble/Tutorials.html~~
 
 <h3 id="3">3. Controlling the vehicle within LAN</h3>
 
@@ -160,7 +160,9 @@ Vehicle control via a PC can be divided into two parts as follows
 
   The vehicle is equipped with a camera. The vehicle needs to send the images captured by the camera to the PC to provide a live view of the vehicle.
 
-You are required to complete the following 2 steps on both the PC and the vehicle controller.
+\*Before you start to clone this repo, please download and build the [`video_view`](https://github.com/dev10110/ros2-video-view) package on your PC and the robot.
+
+Then, you are required to complete the following 2 steps on both the PC and the vehicle controller.
 
 **Download the source code**
 
